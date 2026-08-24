@@ -14,13 +14,30 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
         </Block>
     </StackLayout>,
 
+    <StackLayout key="layout-point-circle-axes" maxWidth="xl">
+        <Block id="point-circle-axes" padding="sm">
+            <EditableParagraph id="para-point-circle-axes" blockId="point-circle-axes">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Axes with the centre at the origin and a <strong className="font-semibold text-slate-900">radius of exactly 1</strong>.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-point-circle-angle" maxWidth="xl">
+        <Block id="point-circle-angle" padding="sm">
+            <EditableParagraph id="para-point-circle-angle" blockId="point-circle-angle">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                The turn angle <InlineFormula latex="\theta" /> is measured from the positive{" "}
+                <InlineFormula latex="x" />-axis, going <strong className="font-semibold text-slate-900">anticlockwise</strong>.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
     <StackLayout key="layout-point-circle-setup" maxWidth="xl">
         <Block id="point-circle-setup" padding="sm">
             <EditableParagraph id="para-point-circle-setup" blockId="point-circle-setup">
-                Put the turntable on a set of axes, centre at the origin, <strong className="font-semibold text-slate-900">radius exactly 1</strong>. Mark
-                the turn angle <InlineFormula latex="\theta" /> from the positive{" "}
-                <InlineFormula latex="x" />-axis, going <strong className="font-semibold text-slate-900">anticlockwise</strong>. The minifigure now sits at
-                a point with coordinates <InlineFormula latex="(\cos\theta, \sin\theta)" />.
+                <span className="mr-2 text-slate-400">&bull;</span>
+                The minifigure stands at the point <InlineFormula latex="(\cos\theta, \sin\theta)" />.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -28,10 +45,10 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
     <StackLayout key="layout-point-circle-hook" maxWidth="xl">
         <Block id="point-circle-hook" padding="sm">
             <EditableParagraph id="para-point-circle-hook" blockId="point-circle-hook">
-                Drop a vertical line from the point to the <InlineFormula latex="x" />-axis and
-                the old <strong className="font-semibold text-slate-900">right-angled triangle</strong> appears, with the radius as its{" "}
-                <strong className="font-semibold text-slate-900">hypotenuse</strong>. Drag the angle below: the two shorter sides keep
-                changing, but the <strong className="font-semibold text-slate-900">hypotenuse never leaves 1</strong>.
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Drop a vertical line to the <InlineFormula latex="x" />-axis and the old{" "}
+                <strong className="font-semibold text-slate-900">right-angled triangle</strong> appears, with the radius as its <strong className="font-semibold text-slate-900">hypotenuse</strong>. Drag the
+                angle below.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -45,10 +62,19 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
     <StackLayout key="layout-point-circle-reading" maxWidth="xl">
         <Block id="point-circle-reading" padding="sm">
             <EditableParagraph id="para-point-circle-reading" blockId="point-circle-reading">
-                Because the hypotenuse is 1, SOHCAHTOA collapses to something simpler:{" "}
-                <InlineFormula latex="\cos\theta" /> is just the <strong className="font-semibold text-slate-900">horizontal side</strong>, and{" "}
-                <InlineFormula latex="\sin\theta" /> just the <strong className="font-semibold text-slate-900">vertical one</strong>. The coordinates of the
-                point are the two ratios, read straight off the axes.
+                <span className="mr-2 text-slate-400">&bull;</span>
+                The two shorter sides keep changing, but the <strong className="font-semibold text-slate-900">hypotenuse never leaves 1</strong>.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-point-circle-ratios" maxWidth="xl">
+        <Block id="point-circle-ratios" padding="sm">
+            <EditableParagraph id="para-point-circle-ratios" blockId="point-circle-ratios">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                So SOHCAHTOA collapses: <InlineFormula latex="\cos\theta" /> is just the{" "}
+                <strong className="font-semibold text-slate-900">horizontal side</strong> and <InlineFormula latex="\sin\theta" /> just the{" "}
+                <strong className="font-semibold text-slate-900">vertical one</strong>, read straight off the axes.
             </EditableParagraph>
         </Block>
     </StackLayout>,

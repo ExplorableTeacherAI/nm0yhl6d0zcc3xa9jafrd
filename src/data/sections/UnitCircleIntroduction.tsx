@@ -19,15 +19,23 @@ export const unitCircleIntroductionBlocks: ReactElement[] = [
 
     <StackLayout key="layout-unit-circle-opening" maxWidth="xl">
         <Block id="unit-circle-opening" padding="sm">
-            <EditableParagraph
-                id="para-unit-circle-opening"
-                blockId="unit-circle-opening"
-            >
-                Stand a Lego minifigure on the rim of a round turntable baseplate and spin it
-                slowly. The figure is always exactly <strong className="font-semibold text-slate-900">one stud-length from the centre</strong>, yet
-                its position on the plate keeps changing. Two numbers describe where it is: how far
-                across it has moved, and how far up. Those two numbers are the <strong className="font-semibold text-slate-900">cosine</strong> and the <strong className="font-semibold text-slate-900">sine</strong> of the
-                turn angle.
+            <EditableParagraph id="para-unit-circle-opening" blockId="unit-circle-opening">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Spin a Lego minifigure on a round baseplate: it stays{" "}
+                <strong className="font-semibold text-slate-900">one stud-length from the centre</strong>,
+                yet its position keeps changing.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-unit-circle-two-numbers" maxWidth="xl">
+        <Block id="unit-circle-two-numbers" padding="sm">
+            <EditableParagraph id="para-unit-circle-two-numbers" blockId="unit-circle-two-numbers">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Two numbers pin it down: how far across it has moved (the{" "}
+                <strong className="font-semibold text-slate-900">cosine</strong>) and how far up
+                (the <strong className="font-semibold text-slate-900">sine</strong>) of the turn
+                angle.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -40,17 +48,31 @@ export const unitCircleIntroductionBlocks: ReactElement[] = [
 
     <StackLayout key="layout-unit-circle-promise" maxWidth="xl">
         <Block id="unit-circle-promise" padding="sm">
-            <EditableParagraph
-                id="para-unit-circle-promise"
-                blockId="unit-circle-promise"
-            >
-                By the end of this lesson you will be able to read a point off that circle and
-                explain, <strong className="font-semibold text-slate-900">from the picture alone</strong>, why{" "}
-                <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> for every angle, and
-                how the identities involving <InlineFormula latex="\tan\theta" /> and{" "}
-                <InlineFormula latex="\sec\theta" /> fall straight out of the same diagram. You
-                already have everything you need: the ratios in a right-angled triangle,
-                Pythagoras' theorem, plotting points, and rearranging an equation.
+            <EditableParagraph id="para-unit-circle-promise" blockId="unit-circle-promise">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                By the end you will explain,{" "}
+                <strong className="font-semibold text-slate-900">from the picture alone</strong>,
+                why <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> for every angle.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-unit-circle-related" maxWidth="xl">
+        <Block id="unit-circle-related" padding="sm">
+            <EditableParagraph id="para-unit-circle-related" blockId="unit-circle-related">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                The same diagram hands you the identities involving{" "}
+                <InlineFormula latex="\tan\theta" /> and <InlineFormula latex="\sec\theta" />.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-unit-circle-prerequisites" maxWidth="xl">
+        <Block id="unit-circle-prerequisites" padding="sm">
+            <EditableParagraph id="para-unit-circle-prerequisites" blockId="unit-circle-prerequisites">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                You already have what you need: right-angled triangle ratios, Pythagoras&rsquo;
+                theorem, plotting points, and rearranging an equation.
             </EditableParagraph>
         </Block>
     </StackLayout>,

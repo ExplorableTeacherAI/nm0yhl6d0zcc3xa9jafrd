@@ -18,10 +18,9 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
     <StackLayout key="layout-tan-sec-scaling" maxWidth="xl">
         <Block id="tan-sec-scaling" padding="sm">
             <EditableParagraph id="para-tan-sec-scaling" blockId="tan-sec-scaling">
+                <span className="mr-2 text-slate-400">&bull;</span>
                 Divide every term of <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> by{" "}
-                <InlineFormula latex="\cos^2\theta" />. Algebraically that is one line; in the
-                picture it is a <strong className="font-semibold text-slate-900">rescaling</strong>, stretching the triangle until its horizontal
-                side has length 1 instead of <InlineFormula latex="\cos\theta" />.
+                <InlineFormula latex="\cos^2\theta" />.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -32,12 +31,22 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
         </Block>
     </StackLayout>,
 
+    <StackLayout key="layout-tan-sec-rescaling" maxWidth="xl">
+        <Block id="tan-sec-rescaling" padding="sm">
+            <EditableParagraph id="para-tan-sec-rescaling" blockId="tan-sec-rescaling">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                In the picture that is a <strong className="font-semibold text-slate-900">rescaling</strong>: stretch the triangle until its horizontal side
+                is 1 instead of <InlineFormula latex="\cos\theta" />.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
     <StackLayout key="layout-tan-sec-hook" maxWidth="xl">
         <Block id="tan-sec-hook" padding="sm">
             <EditableParagraph id="para-tan-sec-hook" blockId="tan-sec-hook">
-                Picture a gym cable running from a pulley at the origin, past the rim of the
-                circle, to a bar sliding up a vertical rail at <InlineFormula latex="x = 1" />.
-                Drag the angle below: the <strong className="font-semibold text-slate-900">height of the bar</strong> is{" "}
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Think of a gym cable from a pulley at the origin to a bar sliding on a rail at{" "}
+                <InlineFormula latex="x = 1" />: the <strong className="font-semibold text-slate-900">height of the bar</strong> is{" "}
                 <InlineFormula latex="\tan\theta" /> and the <strong className="font-semibold text-slate-900">length of the cable</strong> is{" "}
                 <InlineFormula latex="\sec\theta" />.
             </EditableParagraph>
@@ -53,9 +62,19 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
     <StackLayout key="layout-tan-sec-conclusion" maxWidth="xl">
         <Block id="tan-sec-conclusion" padding="sm">
             <EditableParagraph id="para-tan-sec-conclusion" blockId="tan-sec-conclusion">
+                <span className="mr-2 text-slate-400">&bull;</span>
                 Base 1, height <InlineFormula latex="\tan\theta" />, cable{" "}
-                <InlineFormula latex="\sec\theta" />: <strong className="font-semibold text-slate-900">Pythagoras on those three lengths</strong> is the identity. The 1 is simply the{" "}
-                <strong className="font-semibold text-slate-900">distance out to the rail</strong>.
+                <InlineFormula latex="\sec\theta" />: <strong className="font-semibold text-slate-900">Pythagoras on those three lengths</strong> is the
+                identity.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-tan-sec-the-one" maxWidth="xl">
+        <Block id="tan-sec-the-one" padding="sm">
+            <EditableParagraph id="para-tan-sec-the-one" blockId="tan-sec-the-one">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                The 1 in the identity is simply the <strong className="font-semibold text-slate-900">distance out to the rail</strong>.
             </EditableParagraph>
         </Block>
     </StackLayout>,

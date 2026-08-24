@@ -12,25 +12,51 @@ export const wrappingUpBlocks: ReactElement[] = [
         </Block>
     </StackLayout>,
 
-    <StackLayout key="layout-wrapping-up-summary" maxWidth="xl">
-        <Block id="wrapping-up-summary" padding="sm">
-            <EditableParagraph id="para-wrapping-up-summary" blockId="wrapping-up-summary">
-                You can now take any angle, place it on the unit circle, and say why{" "}
-                <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> without quoting a rule
-                you were told to memorise. It is <strong className="font-semibold text-slate-900">Pythagoras on a triangle whose hypotenuse is 1</strong>, and <strong className="font-semibold text-slate-900">squaring</strong> is what makes the negative coordinates past{" "}
-                <InlineFormula latex="90^\circ" /> stop mattering.
+    <StackLayout key="layout-wrapping-up-can-do" maxWidth="xl">
+        <Block id="wrapping-up-can-do" padding="sm">
+            <EditableParagraph id="para-wrapping-up-can-do" blockId="wrapping-up-can-do">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                You can place any angle on the unit circle and say why{" "}
+                <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> &mdash; no memorised rule
+                needed.
             </EditableParagraph>
         </Block>
     </StackLayout>,
 
-    <StackLayout key="layout-wrapping-up-forward" maxWidth="xl">
-        <Block id="wrapping-up-forward" padding="sm">
-            <EditableParagraph id="para-wrapping-up-forward" blockId="wrapping-up-forward">
-                The bigger idea is that <strong className="font-semibold text-slate-900">one diagram carried all three identities</strong>: change which
-                side you call 1, and the same triangle hands you{" "}
-                <InlineFormula latex="1 + \tan^2\theta = \sec^2\theta" /> and its partner with cot
-                and cosec. That is the picture you should reach for whenever an identity looks
-                unfamiliar. Next you will use these to simplify expressions and solve trigonometric
+    <StackLayout key="layout-wrapping-up-pythagoras" maxWidth="xl">
+        <Block id="wrapping-up-pythagoras" padding="sm">
+            <EditableParagraph id="para-wrapping-up-pythagoras" blockId="wrapping-up-pythagoras">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                It is{" "}
+                <strong className="font-semibold text-slate-900">
+                    Pythagoras on a triangle whose hypotenuse is 1
+                </strong>
+                , and <strong className="font-semibold text-slate-900">squaring</strong> is what
+                makes the negative coordinates past <InlineFormula latex="90^\circ" /> stop
+                mattering.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-wrapping-up-one-diagram" maxWidth="xl">
+        <Block id="wrapping-up-one-diagram" padding="sm">
+            <EditableParagraph id="para-wrapping-up-one-diagram" blockId="wrapping-up-one-diagram">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                <strong className="font-semibold text-slate-900">
+                    One diagram carried all three identities
+                </strong>
+                : change which side you call 1 and the same triangle gives{" "}
+                <InlineFormula latex="1 + \tan^2\theta = \sec^2\theta" /> and its cot&ndash;cosec
+                partner.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-wrapping-up-next" maxWidth="xl">
+        <Block id="wrapping-up-next" padding="sm">
+            <EditableParagraph id="para-wrapping-up-next" blockId="wrapping-up-next">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Next: using these identities to simplify expressions and solve trigonometric
                 equations, where the identity becomes the tool rather than the destination.
             </EditableParagraph>
         </Block>

@@ -17,12 +17,10 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
 
     <StackLayout key="layout-identity-holds-derivation" maxWidth="xl">
         <Block id="identity-holds-derivation" padding="sm">
-            <EditableParagraph
-                id="para-identity-holds-derivation"
-                blockId="identity-holds-derivation"
-            >
-                Apply <strong className="font-semibold text-slate-900">Pythagoras</strong> to the horizontal side, the vertical side and the radius. The
-                two shorter sides measure <InlineFormula latex="\cos\theta" /> and{" "}
+            <EditableParagraph id="para-identity-holds-derivation" blockId="identity-holds-derivation">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Apply <strong className="font-semibold text-slate-900">Pythagoras</strong> to the horizontal side, the vertical side and the radius: the
+                two shorter sides are <InlineFormula latex="\cos\theta" /> and{" "}
                 <InlineFormula latex="\sin\theta" />, and the radius is 1.
             </EditableParagraph>
         </Block>
@@ -36,14 +34,20 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
 
     <StackLayout key="layout-identity-holds-quadrants" maxWidth="xl">
         <Block id="identity-holds-quadrants" padding="sm">
-            <EditableParagraph
-                id="para-identity-holds-quadrants"
-                blockId="identity-holds-quadrants"
-            >
-                A right-angled triangle can only hold an angle below{" "}
-                <InlineFormula latex="90^\circ" />, but the turntable keeps spinning past it. Sweep
-                the angle below through all four quadrants and watch the two squared values trade
-                size against a <strong className="font-semibold text-slate-900">total that will not budge</strong>.
+            <EditableParagraph id="para-identity-holds-quadrants" blockId="identity-holds-quadrants">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                A right-angled triangle can only hold an angle below <InlineFormula latex="90^\circ" />,
+                but the turntable keeps spinning past it.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-identity-holds-sweep" maxWidth="xl">
+        <Block id="identity-holds-sweep" padding="sm">
+            <EditableParagraph id="para-identity-holds-sweep" blockId="identity-holds-sweep">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Sweep through all four quadrants below and watch the two squared values trade size
+                against a <strong className="font-semibold text-slate-900">total that will not budge</strong>.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -57,8 +61,19 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
     <StackLayout key="layout-identity-holds-signs" maxWidth="xl">
         <Block id="identity-holds-signs" padding="sm">
             <EditableParagraph id="para-identity-holds-signs" blockId="identity-holds-signs">
-                Past <InlineFormula latex="90^\circ" /> a coordinate turns negative, yet <strong className="font-semibold text-slate-900">squaring it throws the sign away</strong>. The identity holds for <strong className="font-semibold text-slate-900">every angle</strong>, not only the ones a
-                right-angled triangle can contain.
+                <span className="mr-2 text-slate-400">&bull;</span>
+                Past <InlineFormula latex="90^\circ" /> a coordinate turns negative, yet{" "}
+                <strong className="font-semibold text-slate-900">squaring throws the sign away</strong>.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-identity-holds-every-angle" maxWidth="xl">
+        <Block id="identity-holds-every-angle" padding="sm">
+            <EditableParagraph id="para-identity-holds-every-angle" blockId="identity-holds-every-angle">
+                <span className="mr-2 text-slate-400">&bull;</span>
+                The identity holds for <strong className="font-semibold text-slate-900">every angle</strong>, not only the ones a right-angled triangle can
+                contain.
             </EditableParagraph>
         </Block>
     </StackLayout>,
