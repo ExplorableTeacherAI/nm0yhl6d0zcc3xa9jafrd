@@ -73,6 +73,19 @@ export interface VariableDefinition {
  *    { defaultValue: { x: 5, y: 10 }, type: 'object', schema: '{ x: number, y: number }' }
  */
 export const variableDefinitions: Record<string, VariableDefinition> = {
+    /** Angle for the tangent/secant rail picture (section: Stretching to tan and sec) */
+    tangentRailAngle: {
+        defaultValue: 40,
+        type: 'number',
+        label: 'Angle',
+        description: 'Acute angle whose ray meets the vertical rail at x = 1',
+        unit: '°',
+        min: 10,
+        max: 65,
+        step: 1,
+        color: '#b45309',
+    },
+
     /** Acute angle used by the squares-on-the-sides area picture (section: What sin squared theta really means) */
     squaresAngle: {
         defaultValue: 35,

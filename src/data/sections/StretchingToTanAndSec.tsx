@@ -3,7 +3,8 @@ import { Block } from "@/components/templates";
 import { StackLayout } from "@/components/layouts";
 import { EditableH2, EditableParagraph, InlineFormula } from "@/components/atoms";
 import { FormulaBlock } from "@/components/molecules";
-import { VisualOptionCards } from "@/components/organisms";
+import { TangentSecantRail } from "./visuals/TangentSecantRail";
+import { PracticeQuestions } from "./shared/PracticeQuestions";
 
 export const stretchingToTanAndSecBlocks: ReactElement[] = [
     <StackLayout key="layout-tan-sec-heading" maxWidth="xl">
@@ -34,42 +35,128 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
     <StackLayout key="layout-tan-sec-hook" maxWidth="xl">
         <Block id="tan-sec-hook" padding="sm">
             <EditableParagraph id="para-tan-sec-hook" blockId="tan-sec-hook">
-                A gym cable running from the pulley at the origin, past the rim of the circle, to
-                a bar sliding along a vertical rail: the rail sits at{" "}
-                <InlineFormula latex="x = 1" />, the cable length is{" "}
-                <InlineFormula latex="\sec\theta" /> and its height on the rail is{" "}
-                <InlineFormula latex="\tan\theta" />. Where does the 1 in the identity come from?
+                Picture a gym cable running from a pulley at the origin, past the rim of the
+                circle, to a bar sliding up a vertical rail at <InlineFormula latex="x = 1" />.
+                Drag the angle below: the height of the bar is{" "}
+                <InlineFormula latex="\tan\theta" /> and the length of the cable is{" "}
+                <InlineFormula latex="\sec\theta" />.
             </EditableParagraph>
         </Block>
     </StackLayout>,
 
     <StackLayout key="layout-tan-sec-visual" maxWidth="xl">
-        <Block id="tan-sec-visual" padding="sm">
-            <VisualOptionCards
-                blockId="tan-sec-visual"
-                intro="Pick how your students will see tan and sec on the same diagram."
-                cards={[
+        <Block id="tan-sec-visual" padding="sm" hasVisualization>
+            <TangentSecantRail />
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-tan-sec-conclusion" maxWidth="xl">
+        <Block id="tan-sec-conclusion" padding="sm">
+            <EditableParagraph id="para-tan-sec-conclusion" blockId="tan-sec-conclusion">
+                Base 1, height <InlineFormula latex="\tan\theta" />, cable{" "}
+                <InlineFormula latex="\sec\theta" />: Pythagoras on those three lengths is the
+                identity. The 1 is simply the distance out to the rail.
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-tan-sec-practice" maxWidth="xl">
+        <Block id="tan-sec-practice" padding="md">
+            <PracticeQuestions
+                questions={[
                     {
-                        id: "tangent-line-segments",
-                        title: "The tangent and secant as two lengths on a vertical rail at x = 1",
-                        looks: "The unit circle with a vertical line at x = 1; a ray from the centre through the rim meets that line, giving a height labelled tan and a slanted length labelled sec.",
-                        manipulate: "Turn the angle and watch both lengths grow as the ray sweeps upward",
-                        reveals: "The base of 1, the height tan and the slant sec form a right-angled triangle, so Pythagoras gives the identity directly",
-                        recommended: true,
+                        id: "tan-sec-find-secant",
+                        prompt: (
+                            <span>
+                                For an acute angle with <InlineFormula latex="\tan\theta = 2" />,
+                                find <InlineFormula latex="\sec\theta" /> to two decimal places.
+                            </span>
+                        ),
+                        numericAnswer: 2.24,
+                        tolerance: 0.02,
+                        placeholder: "e.g. 1.80",
+                        correctFeedback:
+                            "Correct — sec²θ = 1 + 4 = 5, so sec θ = √5 = 2.24. In the picture that is the cable stretching to a bar sitting two units up the rail.",
+                        hints: [
+                            "Slide the angle until the bar height reads about 2.00, then compare the cable length shown beside it.",
+                            "Substitute into 1 + tan²θ = sec²θ: 1 + 2² = 5, so sec θ = √5.",
+                        ],
                     },
                     {
-                        id: "scaled-triangle-overlay",
-                        title: "The original triangle scaled up until its base is 1",
-                        looks: "The small triangle inside the circle shown next to an enlarged copy of itself, with matching sides labelled before and after the scaling.",
-                        manipulate: "Slide between the original and the enlarged triangle and compare the labels on each side",
-                        reveals: "Dividing every side by cos is the same as enlarging the triangle, which turns one identity into the other",
+                        id: "tan-sec-where-the-one-comes-from",
+                        prompt: (
+                            <span>
+                                In <InlineFormula latex="1 + \tan^2\theta = \sec^2\theta" />,
+                                where does the 1 come from?
+                            </span>
+                        ),
+                        choices: [
+                            {
+                                id: "base-of-triangle",
+                                label: "It is the base of the triangle — the distance from the centre out to the rail",
+                                correct: true,
+                            },
+                            {
+                                id: "tan-45",
+                                label: "It is there because tan 45° = 1",
+                                feedback:
+                                    "The identity holds at every angle, not only 45°. Drag the angle above and check whether the 1 in the picture ever changes.",
+                            },
+                            {
+                                id: "sec-zero",
+                                label: "It is there because sec 0° = 1",
+                                feedback:
+                                    "That is only one particular angle. Look for a length in the diagram that stays equal to 1 no matter how you drag.",
+                            },
+                            {
+                                id: "just-convention",
+                                label: "It is just how the formula is written down",
+                                feedback:
+                                    "Every term in the identity is a length squared. Find the side of the triangle above whose length is 1.",
+                            },
+                        ],
+                        correctFeedback:
+                            "Correct — the horizontal side runs from the centre to the rail at x = 1, so squaring it gives the 1. Pythagoras then supplies the rest.",
+                        hints: [
+                            "The identity is Pythagoras on the triangle above. Which of its three sides never changes length as you drag?",
+                            "The horizontal side always reaches from the centre to the rail at x = 1, and 1² = 1.",
+                        ],
                     },
                     {
-                        id: "three-identity-tabs",
-                        title: "One circle, three tabs, three identities from the same triangle",
-                        looks: "A single unit-circle diagram with tabs that relabel its sides for the sine-cosine, the tan-sec and the cot-cosec versions.",
-                        manipulate: "Switch tabs to see which side is set to 1 each time",
-                        reveals: "All three identities are the same right-angled triangle with a different side chosen as the unit",
+                        id: "tan-sec-simplify-quotient",
+                        prompt: (
+                            <span>
+                                Simplify{" "}
+                                <InlineFormula latex="\dfrac{\sec^2\theta - 1}{\tan^2\theta}" />.
+                            </span>
+                        ),
+                        choices: [
+                            { id: "one", label: <InlineFormula latex="1" />, correct: true },
+                            {
+                                id: "tan-squared",
+                                label: <InlineFormula latex="\tan^2\theta" />,
+                                feedback:
+                                    "Rearrange the identity to see what sec²θ − 1 is equal to, then look at what is left in the fraction.",
+                            },
+                            {
+                                id: "sec-squared",
+                                label: <InlineFormula latex="\sec^2\theta" />,
+                                feedback:
+                                    "Deal with the numerator first: subtracting 1 from sec²θ removes the base of the triangle, leaving one of the other squared sides.",
+                            },
+                            {
+                                id: "zero-value",
+                                label: <InlineFormula latex="0" />,
+                                feedback:
+                                    "Check the numerator at a real angle: set the angle above to 40° and compare sec²θ − 1 with tan²θ. Are they equal, or is one of them zero?",
+                            },
+                        ],
+                        correctFeedback:
+                            "Correct — rearranging the identity gives sec²θ − 1 = tan²θ, so the fraction is tan²θ divided by itself. Reading the identity backwards is often the quickest move.",
+                        hints: [
+                            "Make tan²θ the subject of 1 + tan²θ = sec²θ, then substitute that into the numerator.",
+                            "sec²θ − 1 = tan²θ, so the fraction becomes tan²θ ÷ tan²θ.",
+                        ],
                     },
                 ]}
             />
