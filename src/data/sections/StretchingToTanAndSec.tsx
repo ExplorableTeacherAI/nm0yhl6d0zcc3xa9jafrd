@@ -17,7 +17,7 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
 
     <StackLayout key="layout-tan-sec-scaling" maxWidth="xl">
         <Block id="tan-sec-scaling" padding="sm">
-            <EditableParagraph id="para-tan-sec-scaling" blockId="tan-sec-scaling">
+            <EditableParagraph id="para-tan-sec-scaling" blockId="tan-sec-scaling" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Divide every term of <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> by{" "}
                 <InlineFormula latex="\cos^2\theta" />.
@@ -33,7 +33,7 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
 
     <StackLayout key="layout-tan-sec-rescaling" maxWidth="xl">
         <Block id="tan-sec-rescaling" padding="sm">
-            <EditableParagraph id="para-tan-sec-rescaling" blockId="tan-sec-rescaling">
+            <EditableParagraph id="para-tan-sec-rescaling" blockId="tan-sec-rescaling" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 In the picture that is a <strong className="font-semibold text-slate-900">rescaling</strong>: stretch the triangle until its horizontal side
                 is 1 instead of <InlineFormula latex="\cos\theta" />.
@@ -43,7 +43,7 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
 
     <StackLayout key="layout-tan-sec-hook" maxWidth="xl">
         <Block id="tan-sec-hook" padding="sm">
-            <EditableParagraph id="para-tan-sec-hook" blockId="tan-sec-hook">
+            <EditableParagraph id="para-tan-sec-hook" blockId="tan-sec-hook" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Think of a gym cable from a pulley at the origin to a bar sliding on a rail at{" "}
                 <InlineFormula latex="x = 1" />: the <strong className="font-semibold text-slate-900">height of the bar</strong> is{" "}
@@ -61,7 +61,7 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
 
     <StackLayout key="layout-tan-sec-conclusion" maxWidth="xl">
         <Block id="tan-sec-conclusion" padding="sm">
-            <EditableParagraph id="para-tan-sec-conclusion" blockId="tan-sec-conclusion">
+            <EditableParagraph id="para-tan-sec-conclusion" blockId="tan-sec-conclusion" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Base 1, height <InlineFormula latex="\tan\theta" />, cable{" "}
                 <InlineFormula latex="\sec\theta" />: <strong className="font-semibold text-slate-900">Pythagoras on those three lengths</strong> is the
@@ -72,7 +72,7 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
 
     <StackLayout key="layout-tan-sec-the-one" maxWidth="xl">
         <Block id="tan-sec-the-one" padding="sm">
-            <EditableParagraph id="para-tan-sec-the-one" blockId="tan-sec-the-one">
+            <EditableParagraph id="para-tan-sec-the-one" blockId="tan-sec-the-one" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 The 1 in the identity is simply the <strong className="font-semibold text-slate-900">distance out to the rail</strong>.
             </EditableParagraph>

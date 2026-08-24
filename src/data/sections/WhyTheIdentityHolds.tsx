@@ -17,7 +17,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
 
     <StackLayout key="layout-identity-holds-derivation" maxWidth="xl">
         <Block id="identity-holds-derivation" padding="sm">
-            <EditableParagraph id="para-identity-holds-derivation" blockId="identity-holds-derivation">
+            <EditableParagraph id="para-identity-holds-derivation" blockId="identity-holds-derivation" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Apply <strong className="font-semibold text-slate-900">Pythagoras</strong> to the horizontal side, the vertical side and the radius: the
                 two shorter sides are <InlineFormula latex="\cos\theta" /> and{" "}
@@ -34,7 +34,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
 
     <StackLayout key="layout-identity-holds-quadrants" maxWidth="xl">
         <Block id="identity-holds-quadrants" padding="sm">
-            <EditableParagraph id="para-identity-holds-quadrants" blockId="identity-holds-quadrants">
+            <EditableParagraph id="para-identity-holds-quadrants" blockId="identity-holds-quadrants" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 A right-angled triangle can only hold an angle below <InlineFormula latex="90^\circ" />,
                 but the turntable keeps spinning past it.
@@ -44,7 +44,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
 
     <StackLayout key="layout-identity-holds-sweep" maxWidth="xl">
         <Block id="identity-holds-sweep" padding="sm">
-            <EditableParagraph id="para-identity-holds-sweep" blockId="identity-holds-sweep">
+            <EditableParagraph id="para-identity-holds-sweep" blockId="identity-holds-sweep" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Sweep through all four quadrants below and watch the two squared values trade size
                 against a <strong className="font-semibold text-slate-900">total that will not budge</strong>.
@@ -60,7 +60,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
 
     <StackLayout key="layout-identity-holds-signs" maxWidth="xl">
         <Block id="identity-holds-signs" padding="sm">
-            <EditableParagraph id="para-identity-holds-signs" blockId="identity-holds-signs">
+            <EditableParagraph id="para-identity-holds-signs" blockId="identity-holds-signs" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Past <InlineFormula latex="90^\circ" /> a coordinate turns negative, yet{" "}
                 <strong className="font-semibold text-slate-900">squaring throws the sign away</strong>.
@@ -70,7 +70,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
 
     <StackLayout key="layout-identity-holds-every-angle" maxWidth="xl">
         <Block id="identity-holds-every-angle" padding="sm">
-            <EditableParagraph id="para-identity-holds-every-angle" blockId="identity-holds-every-angle">
+            <EditableParagraph id="para-identity-holds-every-angle" blockId="identity-holds-every-angle" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 The identity holds for <strong className="font-semibold text-slate-900">every angle</strong>, not only the ones a right-angled triangle can
                 contain.

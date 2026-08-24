@@ -16,7 +16,7 @@ export const whatSinSquaredMeansBlocks: ReactElement[] = [
 
     <StackLayout key="layout-sin-squared-notation" maxWidth="xl">
         <Block id="sin-squared-notation" padding="sm">
-            <EditableParagraph id="para-sin-squared-notation" blockId="sin-squared-notation">
+            <EditableParagraph id="para-sin-squared-notation" blockId="sin-squared-notation" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 <InlineFormula latex="\sin^2\theta" /> is shorthand for{" "}
                 <InlineFormula latex="(\sin\theta)^2" />: <strong className="font-semibold text-slate-900">take the sine first, then square the
@@ -27,7 +27,7 @@ export const whatSinSquaredMeansBlocks: ReactElement[] = [
 
     <StackLayout key="layout-sin-squared-wrong-reading" maxWidth="xl">
         <Block id="sin-squared-wrong-reading" padding="sm">
-            <EditableParagraph id="para-sin-squared-wrong-reading" blockId="sin-squared-wrong-reading">
+            <EditableParagraph id="para-sin-squared-wrong-reading" blockId="sin-squared-wrong-reading" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 It is not <InlineFormula latex="\sin(\theta^2)" />, which would{" "}
                 <strong className="font-semibold text-slate-900">square the angle first</strong>. At <InlineFormula latex="\theta = 20^\circ" /> the
@@ -38,7 +38,7 @@ export const whatSinSquaredMeansBlocks: ReactElement[] = [
 
     <StackLayout key="layout-sin-squared-geometry" maxWidth="xl">
         <Block id="sin-squared-geometry" padding="sm">
-            <EditableParagraph id="para-sin-squared-geometry" blockId="sin-squared-geometry">
+            <EditableParagraph id="para-sin-squared-geometry" blockId="sin-squared-geometry" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 <strong className="font-semibold text-slate-900">The squaring has a shape</strong>: build a square on each shorter side, one of side{" "}
                 <InlineFormula latex="\sin\theta" /> and one of side{" "}
@@ -55,7 +55,7 @@ export const whatSinSquaredMeansBlocks: ReactElement[] = [
 
     <StackLayout key="layout-sin-squared-unit-square" maxWidth="xl">
         <Block id="sin-squared-unit-square" padding="sm">
-            <EditableParagraph id="para-sin-squared-unit-square" blockId="sin-squared-unit-square">
+            <EditableParagraph id="para-sin-squared-unit-square" blockId="sin-squared-unit-square" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Drag the angle: the two areas always pour into <strong className="font-semibold text-slate-900">a single unit square</strong>, which is the
                 identity as a picture.

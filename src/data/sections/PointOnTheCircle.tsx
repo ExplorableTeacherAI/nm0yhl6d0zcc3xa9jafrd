@@ -16,7 +16,7 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
 
     <StackLayout key="layout-point-circle-axes" maxWidth="xl">
         <Block id="point-circle-axes" padding="sm">
-            <EditableParagraph id="para-point-circle-axes" blockId="point-circle-axes">
+            <EditableParagraph id="para-point-circle-axes" blockId="point-circle-axes" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Axes with the centre at the origin and a <strong className="font-semibold text-slate-900">radius of exactly 1</strong>.
             </EditableParagraph>
@@ -25,7 +25,7 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
 
     <StackLayout key="layout-point-circle-angle" maxWidth="xl">
         <Block id="point-circle-angle" padding="sm">
-            <EditableParagraph id="para-point-circle-angle" blockId="point-circle-angle">
+            <EditableParagraph id="para-point-circle-angle" blockId="point-circle-angle" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 The turn angle <InlineFormula latex="\theta" /> is measured from the positive{" "}
                 <InlineFormula latex="x" />-axis, going <strong className="font-semibold text-slate-900">anticlockwise</strong>.
@@ -35,7 +35,7 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
 
     <StackLayout key="layout-point-circle-setup" maxWidth="xl">
         <Block id="point-circle-setup" padding="sm">
-            <EditableParagraph id="para-point-circle-setup" blockId="point-circle-setup">
+            <EditableParagraph id="para-point-circle-setup" blockId="point-circle-setup" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 The minifigure stands at the point <InlineFormula latex="(\cos\theta, \sin\theta)" />.
             </EditableParagraph>
@@ -44,7 +44,7 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
 
     <StackLayout key="layout-point-circle-hook" maxWidth="xl">
         <Block id="point-circle-hook" padding="sm">
-            <EditableParagraph id="para-point-circle-hook" blockId="point-circle-hook">
+            <EditableParagraph id="para-point-circle-hook" blockId="point-circle-hook" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 Drop a vertical line to the <InlineFormula latex="x" />-axis and the old{" "}
                 <strong className="font-semibold text-slate-900">right-angled triangle</strong> appears, with the radius as its <strong className="font-semibold text-slate-900">hypotenuse</strong>. Drag the
@@ -61,7 +61,7 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
 
     <StackLayout key="layout-point-circle-reading" maxWidth="xl">
         <Block id="point-circle-reading" padding="sm">
-            <EditableParagraph id="para-point-circle-reading" blockId="point-circle-reading">
+            <EditableParagraph id="para-point-circle-reading" blockId="point-circle-reading" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 The two shorter sides keep changing, but the <strong className="font-semibold text-slate-900">hypotenuse never leaves 1</strong>.
             </EditableParagraph>
@@ -70,7 +70,7 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
 
     <StackLayout key="layout-point-circle-ratios" maxWidth="xl">
         <Block id="point-circle-ratios" padding="sm">
-            <EditableParagraph id="para-point-circle-ratios" blockId="point-circle-ratios">
+            <EditableParagraph id="para-point-circle-ratios" blockId="point-circle-ratios" className="pl-6 -indent-6">
                 <span className="mr-2 text-slate-400">&bull;</span>
                 So SOHCAHTOA collapses: <InlineFormula latex="\cos\theta" /> is just the{" "}
                 <strong className="font-semibold text-slate-900">horizontal side</strong> and <InlineFormula latex="\sin\theta" /> just the{" "}
