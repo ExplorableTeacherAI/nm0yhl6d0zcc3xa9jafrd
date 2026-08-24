@@ -73,6 +73,19 @@ export interface VariableDefinition {
  *    { defaultValue: { x: 5, y: 10 }, type: 'object', schema: '{ x: number, y: number }' }
  */
 export const variableDefinitions: Record<string, VariableDefinition> = {
+    /** Acute angle used by the squares-on-the-sides area picture (section: What sin squared theta really means) */
+    squaresAngle: {
+        defaultValue: 35,
+        type: 'number',
+        label: 'Angle',
+        description: 'Acute angle used to build a square on each shorter side of the triangle',
+        unit: '°',
+        min: 5,
+        max: 85,
+        step: 1,
+        color: '#7c3aed',
+    },
+
     /** Turn angle used by the four-quadrant identity sweep (section: Why the Identity Always Holds) */
     identitySweepAngle: {
         defaultValue: 130,
