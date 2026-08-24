@@ -6,6 +6,7 @@ import {
     EditableParagraph,
     InlineFormula,
 } from "@/components/atoms";
+import { TurntableIllustration } from "./visuals/TurntableIllustration";
 
 export const unitCircleIntroductionBlocks: ReactElement[] = [
     <StackLayout key="layout-unit-circle-title" maxWidth="xl">
@@ -28,6 +29,12 @@ export const unitCircleIntroductionBlocks: ReactElement[] = [
                 across it has moved, and how far up. Those two numbers are the cosine and the
                 sine of the turn angle.
             </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-unit-circle-illustration" maxWidth="xl">
+        <Block id="unit-circle-illustration" padding="sm" hasVisualization>
+            <TurntableIllustration />
         </Block>
     </StackLayout>,
 
