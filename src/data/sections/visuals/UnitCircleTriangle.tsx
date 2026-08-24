@@ -180,6 +180,16 @@ export const UnitCircleTriangle = () => {
 
                 {/* The point on the rim */}
                 <circle cx={pointX} cy={pointY} r={6} fill={HYPOTENUSE_COLOR} />
+                <text
+                    x={pointX + horizontalSign * 14}
+                    y={pointY - 16 * sinValue + 4}
+                    fontSize={14}
+                    fill="#334155"
+                    textAnchor={horizontalSign > 0 ? "start" : "end"}
+                    fontWeight={700}
+                >
+                    {`(${cosValue.toFixed(2)}, ${sinValue.toFixed(2)})`}
+                </text>
 
                 {/* Side labels */}
                 <text
@@ -213,10 +223,6 @@ export const UnitCircleTriangle = () => {
                     hypotenuse = 1
                 </text>
 
-                {/* Coordinate read-out */}
-                <text x={-70} y={26} fontSize={14} fill="#334155" textAnchor="start">
-                    {`Point: (${cosValue.toFixed(2)}, ${sinValue.toFixed(2)})`}
-                </text>
             </svg>
 
             <div className="mx-auto mt-4 flex max-w-[620px] flex-wrap items-center gap-4">
