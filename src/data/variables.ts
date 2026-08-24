@@ -73,6 +73,19 @@ export interface VariableDefinition {
  *    { defaultValue: { x: 5, y: 10 }, type: 'object', schema: '{ x: number, y: number }' }
  */
 export const variableDefinitions: Record<string, VariableDefinition> = {
+    /** Turn angle used by the four-quadrant identity sweep (section: Why the Identity Always Holds) */
+    identitySweepAngle: {
+        defaultValue: 130,
+        type: 'number',
+        label: 'Sweep angle',
+        description: 'Angle swept through all four quadrants, in degrees',
+        unit: '°',
+        min: 0,
+        max: 359,
+        step: 1,
+        color: '#0f766e',
+    },
+
     /** Turn angle on the unit circle, in degrees (section: A Point on the Circle) */
     unitCircleAngle: {
         defaultValue: 50,
