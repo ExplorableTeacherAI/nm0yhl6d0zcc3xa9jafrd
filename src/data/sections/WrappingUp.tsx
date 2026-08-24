@@ -17,8 +17,7 @@ export const wrappingUpBlocks: ReactElement[] = [
             <EditableParagraph id="para-wrapping-up-summary" blockId="wrapping-up-summary">
                 You can now take any angle, place it on the unit circle, and say why{" "}
                 <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> without quoting a rule
-                you were told to memorise. It is Pythagoras on a triangle whose hypotenuse happens
-                to be 1, and squaring is what makes the negative coordinates past{" "}
+                you were told to memorise. It is <strong className="font-semibold text-slate-900">Pythagoras on a triangle whose hypotenuse is 1</strong>, and <strong className="font-semibold text-slate-900">squaring</strong> is what makes the negative coordinates past{" "}
                 <InlineFormula latex="90^\circ" /> stop mattering.
             </EditableParagraph>
         </Block>
@@ -27,7 +26,7 @@ export const wrappingUpBlocks: ReactElement[] = [
     <StackLayout key="layout-wrapping-up-forward" maxWidth="xl">
         <Block id="wrapping-up-forward" padding="sm">
             <EditableParagraph id="para-wrapping-up-forward" blockId="wrapping-up-forward">
-                The bigger idea is that one diagram carried all three identities: change which
+                The bigger idea is that <strong className="font-semibold text-slate-900">one diagram carried all three identities</strong>: change which
                 side you call 1, and the same triangle hands you{" "}
                 <InlineFormula latex="1 + \tan^2\theta = \sec^2\theta" /> and its partner with cot
                 and cosec. That is the picture you should reach for whenever an identity looks

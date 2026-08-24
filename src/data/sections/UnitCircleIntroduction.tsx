@@ -24,10 +24,10 @@ export const unitCircleIntroductionBlocks: ReactElement[] = [
                 blockId="unit-circle-opening"
             >
                 Stand a Lego minifigure on the rim of a round turntable baseplate and spin it
-                slowly. The figure is always exactly one stud-length from the centre, yet its
-                position on the plate keeps changing. Two numbers describe where it is: how far
-                across it has moved, and how far up. Those two numbers are the cosine and the
-                sine of the turn angle.
+                slowly. The figure is always exactly <strong className="font-semibold text-slate-900">one stud-length from the centre</strong>, yet
+                its position on the plate keeps changing. Two numbers describe where it is: how far
+                across it has moved, and how far up. Those two numbers are the <strong className="font-semibold text-slate-900">cosine</strong> and the <strong className="font-semibold text-slate-900">sine</strong> of the
+                turn angle.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -45,7 +45,7 @@ export const unitCircleIntroductionBlocks: ReactElement[] = [
                 blockId="unit-circle-promise"
             >
                 By the end of this lesson you will be able to read a point off that circle and
-                explain, from the picture alone, why{" "}
+                explain, <strong className="font-semibold text-slate-900">from the picture alone</strong>, why{" "}
                 <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> for every angle, and
                 how the identities involving <InlineFormula latex="\tan\theta" /> and{" "}
                 <InlineFormula latex="\sec\theta" /> fall straight out of the same diagram. You

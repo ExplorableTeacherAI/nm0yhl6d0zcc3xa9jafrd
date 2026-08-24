@@ -17,9 +17,9 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
     <StackLayout key="layout-point-circle-setup" maxWidth="xl">
         <Block id="point-circle-setup" padding="sm">
             <EditableParagraph id="para-point-circle-setup" blockId="point-circle-setup">
-                Put the turntable on a set of axes, centre at the origin, radius exactly 1. Mark
+                Put the turntable on a set of axes, centre at the origin, <strong className="font-semibold text-slate-900">radius exactly 1</strong>. Mark
                 the turn angle <InlineFormula latex="\theta" /> from the positive{" "}
-                <InlineFormula latex="x" />-axis, going anticlockwise. The minifigure now sits at
+                <InlineFormula latex="x" />-axis, going <strong className="font-semibold text-slate-900">anticlockwise</strong>. The minifigure now sits at
                 a point with coordinates <InlineFormula latex="(\cos\theta, \sin\theta)" />.
             </EditableParagraph>
         </Block>
@@ -29,9 +29,9 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
         <Block id="point-circle-hook" padding="sm">
             <EditableParagraph id="para-point-circle-hook" blockId="point-circle-hook">
                 Drop a vertical line from the point to the <InlineFormula latex="x" />-axis and
-                the old right-angled triangle appears, with the radius as its hypotenuse. Drag the
-                angle below: the two shorter sides keep changing, but the hypotenuse never leaves
-                1.
+                the old <strong className="font-semibold text-slate-900">right-angled triangle</strong> appears, with the radius as its{" "}
+                <strong className="font-semibold text-slate-900">hypotenuse</strong>. Drag the angle below: the two shorter sides keep
+                changing, but the <strong className="font-semibold text-slate-900">hypotenuse never leaves 1</strong>.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -46,8 +46,8 @@ export const pointOnTheCircleBlocks: ReactElement[] = [
         <Block id="point-circle-reading" padding="sm">
             <EditableParagraph id="para-point-circle-reading" blockId="point-circle-reading">
                 Because the hypotenuse is 1, SOHCAHTOA collapses to something simpler:{" "}
-                <InlineFormula latex="\cos\theta" /> is just the horizontal side, and{" "}
-                <InlineFormula latex="\sin\theta" /> just the vertical one. The coordinates of the
+                <InlineFormula latex="\cos\theta" /> is just the <strong className="font-semibold text-slate-900">horizontal side</strong>, and{" "}
+                <InlineFormula latex="\sin\theta" /> just the <strong className="font-semibold text-slate-900">vertical one</strong>. The coordinates of the
                 point are the two ratios, read straight off the axes.
             </EditableParagraph>
         </Block>

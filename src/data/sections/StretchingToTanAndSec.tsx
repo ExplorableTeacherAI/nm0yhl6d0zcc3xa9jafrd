@@ -20,8 +20,8 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
             <EditableParagraph id="para-tan-sec-scaling" blockId="tan-sec-scaling">
                 Divide every term of <InlineFormula latex="\sin^2\theta + \cos^2\theta = 1" /> by{" "}
                 <InlineFormula latex="\cos^2\theta" />. Algebraically that is one line; in the
-                picture it is a rescaling, stretching the triangle until its horizontal side has
-                length 1 instead of <InlineFormula latex="\cos\theta" />.
+                picture it is a <strong className="font-semibold text-slate-900">rescaling</strong>, stretching the triangle until its horizontal
+                side has length 1 instead of <InlineFormula latex="\cos\theta" />.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -37,8 +37,8 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
             <EditableParagraph id="para-tan-sec-hook" blockId="tan-sec-hook">
                 Picture a gym cable running from a pulley at the origin, past the rim of the
                 circle, to a bar sliding up a vertical rail at <InlineFormula latex="x = 1" />.
-                Drag the angle below: the height of the bar is{" "}
-                <InlineFormula latex="\tan\theta" /> and the length of the cable is{" "}
+                Drag the angle below: the <strong className="font-semibold text-slate-900">height of the bar</strong> is{" "}
+                <InlineFormula latex="\tan\theta" /> and the <strong className="font-semibold text-slate-900">length of the cable</strong> is{" "}
                 <InlineFormula latex="\sec\theta" />.
             </EditableParagraph>
         </Block>
@@ -54,8 +54,8 @@ export const stretchingToTanAndSecBlocks: ReactElement[] = [
         <Block id="tan-sec-conclusion" padding="sm">
             <EditableParagraph id="para-tan-sec-conclusion" blockId="tan-sec-conclusion">
                 Base 1, height <InlineFormula latex="\tan\theta" />, cable{" "}
-                <InlineFormula latex="\sec\theta" />: Pythagoras on those three lengths is the
-                identity. The 1 is simply the distance out to the rail.
+                <InlineFormula latex="\sec\theta" />: <strong className="font-semibold text-slate-900">Pythagoras on those three lengths</strong> is the identity. The 1 is simply the{" "}
+                <strong className="font-semibold text-slate-900">distance out to the rail</strong>.
             </EditableParagraph>
         </Block>
     </StackLayout>,

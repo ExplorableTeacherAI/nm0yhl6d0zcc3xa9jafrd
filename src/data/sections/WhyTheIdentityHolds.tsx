@@ -21,7 +21,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
                 id="para-identity-holds-derivation"
                 blockId="identity-holds-derivation"
             >
-                Apply Pythagoras to the horizontal side, the vertical side and the radius. The
+                Apply <strong className="font-semibold text-slate-900">Pythagoras</strong> to the horizontal side, the vertical side and the radius. The
                 two shorter sides measure <InlineFormula latex="\cos\theta" /> and{" "}
                 <InlineFormula latex="\sin\theta" />, and the radius is 1.
             </EditableParagraph>
@@ -43,7 +43,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
                 A right-angled triangle can only hold an angle below{" "}
                 <InlineFormula latex="90^\circ" />, but the turntable keeps spinning past it. Sweep
                 the angle below through all four quadrants and watch the two squared values trade
-                size against a total that will not budge.
+                size against a <strong className="font-semibold text-slate-900">total that will not budge</strong>.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -57,8 +57,7 @@ export const whyTheIdentityHoldsBlocks: ReactElement[] = [
     <StackLayout key="layout-identity-holds-signs" maxWidth="xl">
         <Block id="identity-holds-signs" padding="sm">
             <EditableParagraph id="para-identity-holds-signs" blockId="identity-holds-signs">
-                Past <InlineFormula latex="90^\circ" /> a coordinate turns negative, yet squaring
-                it throws the sign away. The identity holds for every angle, not only the ones a
+                Past <InlineFormula latex="90^\circ" /> a coordinate turns negative, yet <strong className="font-semibold text-slate-900">squaring it throws the sign away</strong>. The identity holds for <strong className="font-semibold text-slate-900">every angle</strong>, not only the ones a
                 right-angled triangle can contain.
             </EditableParagraph>
         </Block>

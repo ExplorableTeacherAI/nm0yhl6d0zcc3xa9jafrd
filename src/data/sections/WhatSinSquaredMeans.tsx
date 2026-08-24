@@ -18,9 +18,7 @@ export const whatSinSquaredMeansBlocks: ReactElement[] = [
         <Block id="sin-squared-notation" padding="sm">
             <EditableParagraph id="para-sin-squared-notation" blockId="sin-squared-notation">
                 <InlineFormula latex="\sin^2\theta" /> is shorthand for{" "}
-                <InlineFormula latex="(\sin\theta)^2" />: take the sine first, then square the
-                answer. It is not <InlineFormula latex="\sin(\theta^2)" />, which would square the
-                angle before taking any sine at all. At{" "}
+                <InlineFormula latex="(\sin\theta)^2" />: <strong className="font-semibold text-slate-900">take the sine first, then square the answer</strong>. It is not <InlineFormula latex="\sin(\theta^2)" />, which would <strong className="font-semibold text-slate-900">square the angle first</strong>, before taking any sine at all. At{" "}
                 <InlineFormula latex="\theta = 30^\circ" /> the first gives 0.25 and the second
                 gives roughly 0.016 &mdash; nowhere near each other.
             </EditableParagraph>
@@ -30,10 +28,9 @@ export const whatSinSquaredMeansBlocks: ReactElement[] = [
     <StackLayout key="layout-sin-squared-geometry" maxWidth="xl">
         <Block id="sin-squared-geometry" padding="sm">
             <EditableParagraph id="para-sin-squared-geometry" blockId="sin-squared-geometry">
-                The squaring has a shape. Build a square on each shorter side of the triangle, the
+                <strong className="font-semibold text-slate-900">The squaring has a shape</strong>. Build a square on each shorter side of the triangle, the
                 way you would tile a Lego plate: one of side <InlineFormula latex="\sin\theta" />,
-                one of side <InlineFormula latex="\cos\theta" />. Drag the angle and watch the two
-                areas pour into a single unit square.
+                one of side <InlineFormula latex="\cos\theta" />. Drag the angle and watch the two areas pour into <strong className="font-semibold text-slate-900">a single unit square</strong>.
             </EditableParagraph>
         </Block>
     </StackLayout>,
