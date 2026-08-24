@@ -32,8 +32,8 @@ export const UnitCircleTriangle = () => {
         angle > 180 ? 1 : 0
     } 0 ${arcEndX} ${arcEndY}`;
     const halfRadians = radians / 2;
-    const arcLabelX = CENTER_X + (ARC_RADIUS + 20) * Math.cos(halfRadians);
-    const arcLabelY = CENTER_Y - (ARC_RADIUS + 20) * Math.sin(halfRadians);
+    const arcLabelX = CENTER_X + (ARC_RADIUS + 38) * Math.cos(halfRadians);
+    const arcLabelY = CENTER_Y - (ARC_RADIUS + 38) * Math.sin(halfRadians);
 
     // Right-angle marker at the foot of the vertical side
     const markerSize = 11;
@@ -158,9 +158,9 @@ export const UnitCircleTriangle = () => {
                     fontSize={14}
                     fill="#b45309"
                     textAnchor="middle"
-                    fontStyle="italic"
+                    fontWeight={700}
                 >
-                    θ
+                    {`θ = ${angle}°`}
                 </text>
 
                 {/* The point on the rim */}
@@ -202,9 +202,6 @@ export const UnitCircleTriangle = () => {
                 <text x={-70} y={26} fontSize={14} fill="#334155" textAnchor="start">
                     {`Point: (${cosValue.toFixed(2)}, ${sinValue.toFixed(2)})`}
                 </text>
-                <text x={-70} y={48} fontSize={14} fill="#334155" textAnchor="start">
-                    {`Angle: ${angle}°`}
-                </text>
             </svg>
 
             <div className="mx-auto mt-4 flex max-w-[620px] items-center gap-4">
@@ -217,9 +214,6 @@ export const UnitCircleTriangle = () => {
                     onValueChange={(value) => setVar("unitCircleAngle", value[0])}
                     className="flex-1"
                 />
-                <span className="w-14 shrink-0 text-right text-sm font-medium text-slate-700">
-                    {angle}°
-                </span>
                 <Button
                     size="sm"
                     variant="outline"
