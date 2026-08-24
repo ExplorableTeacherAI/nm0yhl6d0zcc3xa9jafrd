@@ -73,6 +73,19 @@ export interface VariableDefinition {
  *    { defaultValue: { x: 5, y: 10 }, type: 'object', schema: '{ x: number, y: number }' }
  */
 export const variableDefinitions: Record<string, VariableDefinition> = {
+    /** Turn angle on the unit circle, in degrees (section: A Point on the Circle) */
+    unitCircleAngle: {
+        defaultValue: 50,
+        type: 'number',
+        label: 'Angle',
+        description: 'Anticlockwise turn angle from the positive x-axis, in degrees',
+        unit: '°',
+        min: 0,
+        max: 360,
+        step: 1,
+        color: '#6366f1',
+    },
+
     // ========================================
     // ADD YOUR VARIABLES HERE
     // ========================================
