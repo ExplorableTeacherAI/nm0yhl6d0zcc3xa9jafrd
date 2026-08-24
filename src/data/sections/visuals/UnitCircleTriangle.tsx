@@ -1,4 +1,5 @@
-import { Button, Slider } from "@/components/atoms";
+import { useEffect, useState } from "react";
+import { Button, Input, Slider } from "@/components/atoms";
 import { useVar, useSetVar } from "@/stores";
 
 const CENTER_X = 200;
@@ -14,6 +15,20 @@ const OPPOSITE_COLOR = "#e11d48";
 export const UnitCircleTriangle = () => {
     const angle = useVar("unitCircleAngle", 50) as number;
     const setVar = useSetVar();
+    const [typedAngle, setTypedAngle] = useState(String(angle));
+
+    // Keep the typed box in step when the angle is changed by the slider or the reset button
+    useEffect(() => {
+        setTypedAngle(String(angle));
+    }, [angle]);
+
+    const applyTypedAngle = (raw: string) => {
+        setTypedAngle(raw);
+        const parsed = Number(raw);
+        if (raw.trim() === "" || !Number.isFinite(parsed)) return;
+        const clamped = Math.min(360, Math.max(0, Math.round(parsed)));
+        setVar("unitCircleAngle", clamped);
+    };
 
     const radians = (angle * Math.PI) / 180;
     const cosValue = Math.cos(radians);
@@ -204,7 +219,7 @@ export const UnitCircleTriangle = () => {
                 </text>
             </svg>
 
-            <div className="mx-auto mt-4 flex max-w-[620px] items-center gap-4">
+            <div className="mx-auto mt-4 flex max-w-[620px] flex-wrap items-center gap-4">
                 <span className="w-16 shrink-0 text-sm text-slate-600">Angle θ</span>
                 <Slider
                     value={[angle]}
@@ -212,8 +227,21 @@ export const UnitCircleTriangle = () => {
                     max={360}
                     step={1}
                     onValueChange={(value) => setVar("unitCircleAngle", value[0])}
-                    className="flex-1"
+                    className="min-w-[180px] flex-1"
                 />
+                <div className="flex shrink-0 items-center gap-1">
+                    <Input
+                        type="number"
+                        min={0}
+                        max={360}
+                        value={typedAngle}
+                        onChange={(event) => applyTypedAngle(event.target.value)}
+                        onBlur={() => setTypedAngle(String(angle))}
+                        className="w-20 bg-white text-right"
+                        aria-label="Type an exact angle in degrees"
+                    />
+                    <span className="text-sm text-slate-600">°</span>
+                </div>
                 <Button
                     size="sm"
                     variant="outline"
